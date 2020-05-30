@@ -1,4 +1,6 @@
+#!/usr/bin/env node
 import * as commander from 'commander'
+import { translate } from './main'
 
 const program = new commander.Command()
 
@@ -8,8 +10,8 @@ program
   .usage('<English|Chinese>')
   .description('请输入英文或者中文')
   .arguments('<English>')
-  .action(function (word) {
-    console.log(word)
+  .action(word => {
+    translate(word)
   });
 
 program.parse(process.argv);

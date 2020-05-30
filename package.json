@@ -1,10 +1,16 @@
 {
   "name": "zch-translate",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "main.js",
   "repository": "git@github.com:zch233/zch-translate.git",
   "author": "zhangchao <529743595@qq.com>",
   "license": "MIT",
+  "bin": {
+    "fy": "src/cli.js"
+  },
+  "files": [
+    "dist/**/*.js"
+  ],
   "scripts": {
     "dev": "tsnd src/cli.ts"
   },
