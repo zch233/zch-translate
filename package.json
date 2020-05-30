@@ -5,10 +5,15 @@
   "repository": "git@github.com:zch233/zch-translate.git",
   "author": "zhangchao <529743595@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "tsnd src/cli.ts"
+  },
   "dependencies": {
-    "@types/md5": "^2.2.0",
-    "@types/node": "^14.0.6",
     "commander": "^5.1.0",
     "md5": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.2.0",
+    "@types/node": "^14.0.6"
   }
 }

@@ -1,0 +1,15 @@
+import * as commander from 'commander'
+
+const program = new commander.Command()
+
+program
+  .version('0.0.1')
+  .name('fy')
+  .usage('<English|Chinese>')
+  .description('请输入英文或者中文')
+  .arguments('<English>')
+  .action(function (word) {
+    console.log(word)
+  });
+
+program.parse(process.argv);

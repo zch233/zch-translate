@@ -4,14 +4,19 @@
 
 "@types/md5@^2.2.0":
   version "2.2.0"
-  resolved "https://registry.npm.taobao.org/@types/md5/download/@types/md5-2.2.0.tgz#cd82e16b95973f94bb03dee40c5b6be4a7fb7fb4"
+  resolved "https://registry.npm.taobao.org/@types/md5/download/@types/md5-2.2.0.tgz?cache=0&sync_timestamp=1588204605790&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fmd5%2Fdownload%2F%40types%2Fmd5-2.2.0.tgz#cd82e16b95973f94bb03dee40c5b6be4a7fb7fb4"
   integrity sha1-zYLha5WXP5S7A97kDFtr5Kf7f7Q=
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^14.0.6":
+"@types/node@*":
   version "14.0.6"
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.6.tgz#f9e178b2da31a4b0ec60b64649e244c31ce18daf"
+  integrity sha1-+eF4stoxpLDsYLZGSeJEwxzhja8=
+
+"@types/node@^14.0.6":
+  version "14.0.6"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.6.tgz?cache=0&sync_timestamp=1590801806103&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.0.6.tgz#f9e178b2da31a4b0ec60b64649e244c31ce18daf"
   integrity sha1-+eF4stoxpLDsYLZGSeJEwxzhja8=
 
 charenc@~0.0.1:
