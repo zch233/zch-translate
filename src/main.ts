@@ -2,6 +2,15 @@ import * as https from 'https'
 import MD5 = require('md5')
 import { appId, key } from './private'
 
+interface ErrorMap {
+  [key: string]: string
+}
+const errorMap: ErrorMap = {
+  52003: '用户认证失败',
+  54001: '签名错误',
+  54004: '账户余额不足',
+}
+
 export function translate (word: string) {
   const salt = Math.random()
   const isEnglish: boolean = /[a-zA-Z]/.test(word)
@@ -24,13 +33,20 @@ export function translate (word: string) {
     })
     res.on('end', () => {
       interface Result {
-        from: string,
-        to: string,
-        trans_result: { src: string, dst: string }[]
+        error_code?: string;
+        error_msg?: string;
+        from: string;
+        to: string;
+        trans_result: { src: string, dst: string }[];
       }
       const result: Result = JSON.parse(str)
-      console.log(result.trans_result.map(item => item.dst).join(','))
-      process.exit(0)
+      if (result.error_code) {
+        console.log(errorMap[result.error_code] || result.error_msg)
+        process.exit(1)
+      } else {
+        console.log(result.trans_result.map(item => item.dst).join(','))
+        process.exit(0)
+      }
     })
   })
   request.on('error', (e) => {
