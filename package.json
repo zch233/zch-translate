@@ -1,6 +1,6 @@
 {
   "name": "zch-translate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/main.js",
   "repository": "git@github.com:zch233/zch-translate.git",
   "author": "zhangchao <529743595@qq.com>",
